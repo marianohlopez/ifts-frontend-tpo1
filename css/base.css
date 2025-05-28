@@ -12,11 +12,26 @@ body {
 
 /* NAVBAR*/
 
+/* .navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+} */
 .navbar {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+
+.scrolled {
+  background-color: black;
 }
 
 .logo {
