@@ -1,0 +1,269 @@
+/* Reutilizando estilos del header que ya tenías */
+.header-cont {
+  background-color: black;
+  height: 10vh; /* Ajusta la altura del header si es necesario */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: black;
+  color: white;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1;
+  margin-right: 50px;
+}
+
+.navbar .logo span {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-right: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ccc;
+}
+
+
+/* Estilos específicos para el contenido de la página de tutoriales */
+.tutoriales-main {
+  background-color: #f0f0f0; /* Fondo gris claro como en la imagen */
+  padding: 40px 0;
+  min-height: calc(100vh - 10vh); /* Asegura que ocupe el resto de la altura de la ventana */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar el contenido horizontalmente */
+}
+
+.intro-tutoriales {
+  width: 80%;
+  max-width: 900px; /* Limitar el ancho para legibilidad */
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.intro-tutoriales .intro-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.tips-tutoriales {
+  width: 80%;
+  max-width: 900px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.tips-tutoriales h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.tips-tutoriales p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.tips-tutoriales .call-to-action {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 30px;
+}
+
+
+/* Sección de métodos de preparación */
+.metodos-preparacion {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las cards se envuelvan en pantallas pequeñas */
+  justify-content: center; /* Centra las cards horizontalmente */
+  gap: 40px; /* Espacio entre las cards */
+  width: 90%;
+  max-width: 1200px; /* Limitar el ancho máximo del contenedor de cards */
+}
+
+.metodo-card {
+  width: 100%; /* Por defecto ocupa todo el ancho */
+  max-width: 450px; /* Ancho máximo de cada tarjeta, ajusta según el diseño deseado */
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Asegura que el contenido no se salga del radio del borde */
+}
+
+.metodo-imagen-cont {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 60%; /* Ratio 16:9, ajusta si tus imágenes tienen otra proporción */
+  overflow: hidden;
+}
+
+.metodo-imagen-cont img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cubre el contenedor sin distorsionar la imagen */
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.metodo-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Ocupa toda la altura por defecto */
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Alinear el contenido al final (abajo) */
+  align-items: flex-start; /* Alinear el contenido a la izquierda */
+  padding: 20px; /* Espaciado interno */
+  opacity: 0; /* Oculto por defecto */
+  transition: opacity 0.3s ease;
+}
+
+.metodo-imagen-cont:hover .metodo-overlay {
+  opacity: 1; /* Aparece al pasar el mouse */
+}
+
+.metodo-imagen-cont:hover img {
+  transform: scale(1.05); /* Ligeramente más grande al pasar el mouse */
+}
+
+.metodo-overlay p {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: left; /* Alineación del texto "ESPRESSO" o "PRENSA FRANCESA" */
+}
+
+.btn-paso {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: white; /* Botón blanco como en la imagen */
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-paso:hover {
+  background-color: #eee;
+  color: #333;
+}
+
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .navbar .logo {
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .nav-links li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .intro-tutoriales,
+  .tips-tutoriales {
+    width: 90%;
+    padding: 0 10px;
+  }
+
+  .metodos-preparacion {
+    flex-direction: column;
+    gap: 30px;
+    width: 90%;
+  }
+
+  .metodo-card {
+    max-width: 100%; /* Ocupa todo el ancho disponible en móviles */
+  }
+
+  .metodo-overlay p {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar .logo {
+    font-size: 20px;
+  }
+
+  .navbar .logo span {
+    font-size: 16px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+
+  .intro-tutoriales .intro-text {
+    font-size: 14px;
+  }
+
+  .tips-tutoriales h3 {
+    font-size: 18px;
+  }
+
+  .tips-tutoriales p {
+    font-size: 13px;
+  }
+
+  .tips-tutoriales .call-to-action {
+    font-size: 16px;
+  }
+}
