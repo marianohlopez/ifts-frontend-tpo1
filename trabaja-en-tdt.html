@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabajá en TDC - Tienda de Café</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Oswald:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/trabaja-en-tdt.css">
+</head>
+
+<body>
+  <header class="header-cont">
+    <nav class="navbar">
+      <div class="logo">TIENDA<br><span>DE TÉ</span></div>
+      <ul class="nav-links">
+        <li><a href="#">Nuestro Té</a></li>
+        <li><a href="#">Tutoriales</a></li>
+        <li><a href="#">Locales</a></li>
+        <li><a href="#">Nuestro Menú</a></li>
+        <li><a href="#">Trabajá con Nosotros</a></li>
+        <li><a href="#">Franquicias</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+
+  </header>
+  <div class="job-application-container">
+    <header class="page-header">
+      <p class="subtitle">SÚMATE A NUESTRO EQUIPO</p>
+      <h1 class="title">TRABAJÁ EN TDT</h1>
+      <div class="title-underline"></div>
+    </header>
+    </header>
+
+    <section class="form-description">
+      <p>Si querés formar parte de Tienda de Té envíanos tus datos y adjunta tu CV</p>
+    </section>
+
+    <form action="#" method="POST" class="job-application-form">
+      <div class="form-group two-columns">
+        <div class="input-wrapper">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="">
+        </div>
+        <div class="input-wrapper">
+          <label for="apellido">Apellido</label>
+          <input type="text" id="apellido" name="apellido" placeholder="">
+        </div>
+      </div>
+
+      <div class="form-group two-columns">
+        <div class="input-wrapper">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="">
+        </div>
+        <div class="input-wrapper">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="">
+        </div>
+      </div>
+
+      <div class="form-group two-columns">
+        <div class="input-wrapper">
+          <label for="puesto">¿Cuál es tu puesto de trabajo?</label>
+          <input type="text" id="puesto" name="puesto" placeholder="">
+        </div>
+        <div class="input-wrapper">
+          <label for="sucursal">¿Cuál es tu sucursal de preferencia?</label>
+          <select id="sucursal" name="sucursal">
+            <option value="">Selecciona una sucursal</option>
+            <option value="sucursal-a">Sucursal A</option>
+            <option value="sucursal-b">Sucursal B</option>
+            <option value="sucursal-c">Sucursal C</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group file-upload-group">
+        <label for="cv">Adjuntar CV</label>
+        <div class="custom-file-upload">
+          <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" class="hidden-input">
+          <label for="cv" class="choose-file-button">Choose File</label>
+          <span id="file-name" class="file-name-display">No file chosen</span>
+        </div>
+      </div>
+
+      <div class="form-group text-area-group">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="6" placeholder=""></textarea>
+      </div>
+
+      <button type="submit" class="submit-button">ENVIAR</button>
+    </form>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <h2>TIENDA<br><span>DE TÉ</span></h2>
+      </div>
+
+      <div class="footer-columns">
+        <div class="footer-section">
+          <h3>CONTENIDOS</h3>
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Nuestro Té</a></li>
+            <li><a href="#">Locales</a></li>
+            <li><a href="#">Nuestro menú</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>NECESITÁS AYUDA</h3>
+          <ul>
+            <li><a href="#">Tutoriales</a></li>
+            <li><a href="#">Trabajá en TDT</a></li>
+            <li><a href="#">Franquicias</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-newsletter">
+        <h3 class="footer-newsletter-title">
+          ¡SUSCRIBITE PARA RECIBIR DESCUENTOS Y NOVEDADES EXCLUSIVAS!
+        </h3>
+        <form>
+          <input type="text" placeholder="Tu nombre">
+          <input type="email" placeholder="Tu email">
+          <button type="submit">SUSCRIBIRME</button>
+        </form>
+
+        <div class="footer-social">
+          <div class="footer-social-title">CONECTATE CON NOSOTROS</div>
+          <div class="footer-social-icons">
+            <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/ffffff/facebook-new.png" alt="Facebook"
+                width="24"></a>
+            <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/ffffff/instagram-new.png" alt="Instagram"
+                width="24"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="footer-divider">
+
+    <div class="footer-bottom">
+      <p>© Copyright 2021 Tienda de té - Todos los derechos reservados.</p>
+      <p>Todos los logos, productos, marcas y nombres aquí utilizados son propiedad registrada.</p>
+    </div>
+  </footer>
+
+
+
+
+  <script src="./js/main.js"></script>
+
+</body>
+
+</html>
